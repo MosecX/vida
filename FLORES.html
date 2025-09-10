@@ -7,9 +7,52 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
+    <style>
+        /* Estilos para el texto TE AMO */
+        .description {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+        
+        .description span {
+            font-family: 'Arial', cursive;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff4d6d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                         0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 77, 109, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Asegurar que el contenedor sea relativo para posicionamiento absoluto */
+        .container {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body class="container">
+    <!-- Texto TE AMO agregado aquí -->
+    <div class="description">
+        <span>¡¡TE AMO!!</span>
+    </div>
+    
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
