@@ -8,68 +8,36 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
     <style>
-        /* Estilos para la animación iOS del texto */
-        .ios-message-container {
-            position: fixed;
-            bottom: 0;
+        /* Estilos para el texto TE AMO */
+        .description {
+            position: absolute;
+            top: 20px;
             left: 0;
             right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            z-index: 1000;
-            pointer-events: none;
-            height: 100vh;
-        }
-        
-        .ios-message {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 20px 20px 0 0;
-            padding: 25px 40px;
-            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.2);
-            transform: translateY(100%);
-            animation: iosSlideIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-            animation-delay: 1s;
-            max-width: 500px;
-            width: 90%;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-bottom: none;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            animation-delay: 1s;
         }
         
-        @keyframes iosSlideIn {
-            0% {
-                transform: translateY(100%);
-            }
-            60% {
-                transform: translateY(-15%);
-            }
-            80% {
-                transform: translateY(5%);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-        
-        .ios-message span {
-            font-size: 3.5rem;
-            font-weight: 900;
+        .description span {
+            font-family: 'Arial', cursive;
+            font-size: 3rem;
+            font-weight: bold;
             color: #ff4d6d;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            letter-spacing: 1px;
-            display: block;
-            padding: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                         0 0 10px rgba(255, 255, 255, 0.5),
+                         0 0 20px rgba(255, 77, 109, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
         }
         
-        .ios-home-indicator {
-            width: 134px;
-            height: 5px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 3px;
-            margin: 15px auto 5px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         /* Asegurar que el contenedor sea relativo para posicionamiento absoluto */
@@ -80,12 +48,9 @@
 </head>
 
 <body class="container">
-    <!-- Contenedor para el mensaje estilo iOS -->
-    <div class="ios-message-container">
-        <div class="ios-message">
-            <span>¡¡TE AMO PUTO 🗣🔥!!</span>
-            <div class="ios-home-indicator"></div>
-        </div>
+    <!-- Texto TE AMO agregado aquí -->
+    <div class="description">
+        <span>¡¡TE AMO PUTO 🗣🔥!!</span>
     </div>
     
     <div class="night"></div>
@@ -105,7 +70,7 @@
           <div class="flower__light flower__light--5"></div>
           <div class="flower__light flower__light--6"></div>
           <div class="flower__light flower__light--7"></div>
-          <div class="flower__language flower__light--8"></div>
+          <div class="flower__light flower__light--8"></div>
   
         </div>
         <div class="flower__line">
@@ -297,7 +262,7 @@
   
       <div class="long-g long-g--2">
         <div class="grow-ans" style="--d:4s">
-          <div class="leaf leaf--极"></div>
+          <div class="leaf leaf--0"></div>
         </div>
         <div class="grow-ans" style="--d:4.2s">
           <div class="leaf leaf--1"></div>
@@ -305,7 +270,7 @@
         <div class="grow-ans" style="--d:4.4s">
           <div class="leaf leaf--2"></div>
         </div>
-        <div class="grow-ans" style="--极:4.6s">
+        <div class="grow-ans" style="--d:4.6s">
           <div class="leaf leaf--3"></div>
         </div>
       </div>
@@ -326,14 +291,14 @@
       </div>
   
       <div class="long-g long-g--4">
-        <div class="grow-极" style="--d:4s">
+        <div class="grow-ans" style="--d:4s">
           <div class="leaf leaf--0"></div>
         </div>
         <div class="grow-ans" style="--d:4.2s">
           <div class="leaf leaf--1"></div>
         </div>
         <div class="grow-ans" style="--d:3s">
-         极 <div class="leaf leaf--2"></div>
+          <div class="leaf leaf--2"></div>
         </div>
         <div class="grow-ans" style="--d:3.6s">
           <div class="leaf leaf--3"></div>
@@ -356,8 +321,8 @@
       </div>
   
       <div class="long-g long-g--6">
-        <div class="极row-ans" style="--d:4.2s">
-          <极 class="leaf leaf--0"></div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--0"></div>
         </div>
         <div class="grow-ans" style="--d:4.4s">
           <div class="leaf leaf--1"></div>
@@ -377,7 +342,7 @@
         <div class="grow-ans" style="--d:3.2s">
           <div class="leaf leaf--1"></div>
         </div>
-        <极 class="grow-ans" style="--d:3.5s">
+        <div class="grow-ans" style="--d:3.5s">
           <div class="leaf leaf--2"></div>
         </div>
         <div class="grow-ans" style="--d:3.6s">
